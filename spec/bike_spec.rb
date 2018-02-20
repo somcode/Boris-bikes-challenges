@@ -1,5 +1,8 @@
-require_relative '../lib/bike.rb'
+require 'bike'
 
 describe Bike do
-  it { is_expected.to respond_to :working?}
+  it "a test"  do
+    bike = Bike.new
+    expect(bike.respond_to?(:working?)).to eq true
+  end
 end
